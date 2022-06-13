@@ -72,16 +72,20 @@ spec:
             {{- end }}
             - name: WEBLATE_ADMIN_EMAIL
               value: "{{ .Values.adminEmail }}"
+            {{- if .Values.adminUser }}
             - name: WEBLATE_ADMIN_NAME
               valueFrom:
                 secretKeyRef:
                   name: {{ include "weblate.fullname" . }}
                   key: admin-user
+            {{- end }}
+            {{- if .Values.adminPassword }}
             - name: WEBLATE_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ include "weblate.fullname" . }}
                   key: admin-password
+            {{- end }}
             - name: WEBLATE_SITE_TITLE
               value: "{{ .Values.siteTitle }}"
             - name: WEBLATE_SITE_DOMAIN
@@ -94,16 +98,20 @@ spec:
               value: "{{ .Values.emailTLS }}"
             - name: WEBLATE_EMAIL_USE_SSL
               value: "{{ .Values.emailSSL }}"
+            {{- if .Values.emailUser }}
             - name: WEBLATE_EMAIL_USER
               valueFrom:
                 secretKeyRef:
                   name: {{ include "weblate.fullname" . }}
                   key: email-user
+            {{- end }}
+            {{- if .Values.emailPassword }}
             - name: WEBLATE_EMAIL_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ include "weblate.fullname" . }}
                   key: email-password
+            {{- end }}
             - name: WEBLATE_SERVER_EMAIL
               value: "{{ .Values.serverEmail }}"
             - name: WEBLATE_DEFAULT_FROM_EMAIL
