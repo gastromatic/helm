@@ -16,9 +16,9 @@ updateStrategy: Recreate
 
 # adminEmail -- Email of Admin Account
 adminEmail: ''
-# adminUser -- Name of Admin Account
+# adminUser -- Name of Admin Account. If not set here you can add secret via external secret based on externalSecretName value.
 adminUser: ''
-# adminPassword -- Password of Admin Account
+# adminPassword -- Password of Admin Account. If not set here you can add secret via external secret based on externalSecretName value.
 adminPassword: ''
 
 # siteTile -- Site title
@@ -34,9 +34,9 @@ emailPort: 587
 emailTLS: true
 # emailSSL -- Use SSL when sending emails
 emailSSL: true
-# emailUser -- User name for sending emails
+# emailUser -- User name for sending emails. If not set here you can add secret via external secret based on externalSecretName value.
 emailUser: ''
-# emailPassword -- Password for sending emails
+# emailPassword -- Password for sending emails. If not set here you can add secret via external secret based on externalSecretName value.
 emailPassword: ''
 
 # serverEmail -- Sender for outgoing emails
