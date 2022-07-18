@@ -1,6 +1,6 @@
 # weblate
 
-![Version: 0.4.10](https://img.shields.io/badge/Version-0.4.10-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.12.1](https://img.shields.io/badge/AppVersion-4.12.1-informational?style=flat-square)
+![Version: 0.4.12](https://img.shields.io/badge/Version-0.4.12-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.13](https://img.shields.io/badge/AppVersion-4.13-informational?style=flat-square)
 
 Weblate is a free web-based translation management system.
 
@@ -24,8 +24,8 @@ $ helm install my-release weblate/weblate
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | postgresql | 10.3.14 |
-| https://charts.bitnami.com/bitnami | redis | 12.10.1 |
+| https://raw.githubusercontent.com/bitnami/charts/defb094c658024e4aa8245622dab202874880cbc/bitnami/ | postgresql | 10.3.14 |
+| https://raw.githubusercontent.com/bitnami/charts/defb094c658024e4aa8245622dab202874880cbc/bitnami/ | redis | 12.10.1 |
 
 ## Values
 
@@ -53,7 +53,7 @@ $ helm install my-release weblate/weblate
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"weblate/weblate"` |  |
-| image.tag | string | `"4.12.1-1"` |  |
+| image.tag | string | `"4.13-1"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.enabled | bool | `false` |  |
